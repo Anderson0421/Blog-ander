@@ -2,9 +2,13 @@ import { useEffect, useState } from "react"
 
 import Post from "../../types"
 import PostCard from "./assets/Post";
+import Skeleton from "./assets/Skeleton";
 
 const Posts = () => {
-    const [Posts, setPost] = useState<Post[]>([]);
+    const [Posts, setPost] = useState<Post[] | null>(null);
+    // Ahora estamos diciendo que useState puede ser un array de objetos
+    // de tipo Post o null.
+    
 
     // Al colocar <Post[]> estamos indicando que post es un 
     // array de objetos de tipo Post y solo se pueden agregar
@@ -34,7 +38,7 @@ const Posts = () => {
                     )
                 })
                     :
-                    <h1>Cargando...</h1>
+                    [1, 2, 3, 4, 5, 6].map((n) => <Skeleton key={n} />)
             }
         </section>
     );
