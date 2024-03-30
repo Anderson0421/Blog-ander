@@ -32,7 +32,7 @@ const Posts = () => {
                             key={index}
                             id={post.id}
                             title={post.title}
-                            content={post.content}
+                            excerpt={post.excerpt}
                             bg_image={post.bg_image}
                         />
                     )

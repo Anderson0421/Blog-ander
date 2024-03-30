@@ -2,7 +2,8 @@
 type Post = {
     id: number,
     title: string
-    content: string
+    content?: string
+    excerpt:string
     bg_image: string
 }
 

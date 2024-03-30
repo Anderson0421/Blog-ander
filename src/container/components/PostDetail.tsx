@@ -25,7 +25,7 @@ export default function PostDetail() {
                     post ?
                         <article className="mx-auto max-lg:mx-20 max-md:mx-10 max-sm:mx-8 w-full mt-12 max-w-2xl format format-sm sm:format-base lg:format-lg format-blue">
                             <h1 className="antialiased text-white font-bold text-3xl">{post.title}</h1>
-                            <p className=" antialiased text-gray-200 mt-5 leading-7" dangerouslySetInnerHTML={{ __html: post.content }} >
+                            <p className=" antialiased text-gray-200 mt-5 leading-7" dangerouslySetInnerHTML={{ __html: post.content ?? '' }} >
                             </p>
                         </article>
                         :
