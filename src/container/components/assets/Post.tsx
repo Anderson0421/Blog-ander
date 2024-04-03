@@ -14,7 +14,7 @@ const Post: React.FC<PostType> = ({ id, title, excerpt, bg_image }) => {
                 <h2 className="text-lg font-bold text-white">{title}</h2>
                 <p className="mt-2 text-sm text-gray-300" dangerouslySetInnerHTML={{ __html: excerpt.substring(0, 150)+'...' }}></p>
                 <img src={`${bg_image}?sp=racwdli&st=2024-02-24T18:20:08Z&se=2027-02-24T02:20:08Z&sv=2022-11-02&sr=c&sig=nBH9cEemkR9Hh4t6yX1n1KJ1gAuDRrhAnzBmfDvE2Hg%3D`} alt={title}
-                    className=" w-full group-hover:scale-105 saturate-50 group-hover:saturate-150 mt-4 object-cover rounded-sm duration-300 transition-all"
+                    className=" w-full h-max group-hover:scale-105 saturate-50 group-hover:saturate-150 mt-4 rounded-sm duration-300 transition-all"
                 />
             </div>
         </Link>

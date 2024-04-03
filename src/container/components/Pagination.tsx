@@ -1,5 +1,5 @@
 import React from "react";
-import { Pagination, Button } from "@nextui-org/react";
+import { Pagination } from "@nextui-org/react";
 
 export default function App() {
     const [currentPage, setCurrentPage] = React.useState(1);
@@ -9,28 +9,10 @@ export default function App() {
             <p className="text-small text-default-500">Selected Page: {currentPage}</p>
             <Pagination
                 total={10}
-                color="secondary"
+                color="default"
                 page={currentPage}
                 onChange={setCurrentPage}
             />
-            <div className="flex gap-2">
-                <Button
-                    size="sm"
-                    variant="flat"
-                    color="secondary"
-                    onPress={() => setCurrentPage((prev) => (prev > 1 ? prev - 1 : prev))}
-                >
-                    Previous
-                </Button>
-                <Button
-                    size="sm"
-                    variant="flat"
-                    color="secondary"
-                    onPress={() => setCurrentPage((prev) => (prev < 10 ? prev + 1 : prev))}
-                >
-                    Next
-                </Button>
-            </div>
         </div>
     );
 }

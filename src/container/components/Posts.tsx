@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import Post from "../../types"
+import {Post} from "../../types"
 import PostCard from "./assets/Post";
 import Skeleton from "./assets/Skeleton";
 
@@ -23,8 +23,7 @@ const Posts = () => {
         GetData()
     }, [])
     return (
-
-        <section className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-6 mt-4">
+        <section className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-x-3 gap-y-20 max-xl:grid-cols-3 mt-4">
             {
                 Posts ? Posts.map((post, index) => {
                     return (

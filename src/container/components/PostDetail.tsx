@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
 import Layout from "../Layouts/Layout";
 import { useEffect } from "react";
-import PostType from "../../types";
+import { Post } from "../../types";
 import { useState } from "react";
 import Loader from "./assets/Loader";
 
 export default function PostDetail() {
-    const [post, setPost] = useState<PostType | null>(null);
+    const [post, setPost] = useState<Post | null>(null);
     const { id } = useParams();
 
     useEffect(() => {

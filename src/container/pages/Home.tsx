@@ -1,6 +1,7 @@
-import { Pagination } from "@nextui-org/react";
+import Pagination from "../components/Pagination";
 import Layout from "../Layouts/Layout";
 import Posts from "../components/Posts";
+import Categories from "../components/Categories";
 
 export default function Home() {
     return (
@@ -15,9 +16,12 @@ export default function Home() {
                 <p className="text-sm  mt-4">
                     Ultimos posts:
                 </p>
+                <div>
+                    <Categories />
+                </div>
                 <Posts />
                 <div className="pt-10">
-                    <Pagination total={10} initialPage={1} color="primary" showShadow />
+                    <Pagination />
                 </div>
             </div>
         </Layout>
