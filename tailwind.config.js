@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const { nextui } = require("@nextui-org/react");
+import animations from '@midudev/tailwind-animations'
 
 
 export default {
@@ -13,6 +14,6 @@ export default {
     extend: {},
   },
   darkMode: 'class',
-  plugins: [nextui()],
+  plugins: [nextui(),animations],
 }
 

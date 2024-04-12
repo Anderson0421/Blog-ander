@@ -1,4 +1,3 @@
-import Pagination from "../components/Pagination";
 import Layout from "../Layouts/Layout";
 import Posts from "../components/Posts";
 import Categories from "../components/Categories";
@@ -20,9 +19,6 @@ export default function Home() {
                     <Categories />
                 </div>
                 <Posts />
-                <div className="pt-10">
-                    <Pagination />
-                </div>
             </div>
         </Layout>
     )
